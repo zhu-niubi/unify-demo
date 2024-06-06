@@ -1,0 +1,93 @@
+/*------------------------------------
+  Custom Buttons
+------------------------------------*/
+
+.btn-pointer {
+  position: relative;
+  font-weight: $link-font-weight;
+  padding-right: $link-padding-x;
+  padding-right: #{$link-pointer-pseudo-arrow-width * 2};
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: $link-pointer-pseudo-arrow-position-offset;
+    width: $link-pointer-pseudo-arrow-width;
+    height: $link-pointer-pseudo-arrow-height;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: $link-pointer-pseudo-arrow-width $link-pointer-pseudo-arrow-height;
+    content: '';
+    transform: translateY(-50%);
+    transition: $link-pointer-pseudo-arrow-transition;
+  }
+
+  &:hover,
+  [href]:hover & {
+    &::after {
+      right: $link-pointer-pseudo-arrow-hover-position-offset;
+    }
+  }
+}
+
+.btn-white {
+  color: $btn-white-color;
+  font-weight: $btn-white-font-weight;
+  background-color: $btn-white-bg-color;
+  border-color: $btn-white-border-color;
+
+  &.dropdown-toggle::after {
+    background-image: escape-svg(url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='#{$secondary}' xmlns='http://www.w3.org/2000/svg'><path d='M12.72,15.78a.75.75,0,0,1-.53.22h-.38a.77.77,0,0,1-.53-.22L6.15,10.64a.5.5,0,0,1,0-.71l.71-.71a.49.49,0,0,1,.7,0L12,13.67l4.44-4.45a.5.5,0,0,1,.71,0l.7.71a.5.5,0,0,1,0,.71Z'/></svg>"));
+    transition: $btn-transition;
+  }
+
+  .btn-pointer {
+    &::after {
+      background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#{$secondary}' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z'/></svg>"));
+    }
+  }
+
+  .btn-check:focus + &,
+  &:hover,
+  &:focus {
+    color: $btn-white-hover-color;
+    border-color: $btn-white-border-color;
+    box-shadow: $btn-white-box-shadow-hover;
+
+    &.dropdown-toggle::after {
+      background-image: escape-svg(url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='#{$primary}' xmlns='http://www.w3.org/2000/svg'><path d='M12.72,15.78a.75.75,0,0,1-.53.22h-.38a.77.77,0,0,1-.53-.22L6.15,10.64a.5.5,0,0,1,0-.71l.71-.71a.49.49,0,0,1,.7,0L12,13.67l4.44-4.45a.5.5,0,0,1,.71,0l.7.71a.5.5,0,0,1,0,.71Z'/></svg>"));
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $btn-white-disabled-color;
+    background-color: $btn-white-bg-disabled-color;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    &:hover,
+    .btn-check:focus + &,
+    &:focus {
+      &.btn-pointer {
+        &::after {
+          background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#{(color-contrast($value))}' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z'/></svg>"));
+        }
+      }
+    }
+
+    &.dropdown-toggle::after {
+      background-image: escape-svg(url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='#{(color-contrast($value))}' xmlns='http://www.w3.org/2000/svg'><path d='M12.72,15.78a.75.75,0,0,1-.53.22h-.38a.77.77,0,0,1-.53-.22L6.15,10.64a.5.5,0,0,1,0-.71l.71-.71a.49.49,0,0,1,.7,0L12,13.67l4.44-4.45a.5.5,0,0,1,.71,0l.7.71a.5.5,0,0,1,0,.71Z'/></svg>"));
+      transition: $btn-transition;
+    }
+
+    &.btn-pointer {
+      &::after {
+        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#{(color-contrast($value))}' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z'/></svg>"));
+      }
+    }
+  }
+}

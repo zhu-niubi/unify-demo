@@ -1,0 +1,49 @@
+<header id="header" class="navbar navbar-expand-lg navbar-sticky-top navbar-light">
+  <div class="container">
+    <nav class="js-mega-menu navbar-nav-wrap">
+      <!-- Default Logo -->
+      <a class="navbar-brand" href="@@autopath/index.html" aria-label="Unify">
+        <img class="navbar-brand-logo" src="@@autopath/assets/svg/logos/logo.svg" alt="Logo">
+      </a>
+      <!-- End Default Logo -->
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-default">
+          <i class="bi-list"></i>
+        </span>
+        <span class="navbar-toggler-toggled">
+          <i class="bi-x"></i>
+        </span>
+      </button>
+      <!-- End Toggler -->
+      
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="navbar-sticky-top-scroller">
+          <ul class="navbar-nav nav-pills">
+            @@include("../navbar/navbar-nav-menu.html", {
+              "category": "@@category",
+              "subcategory": "@@subcategory",
+              "link": "@@link"
+            })
+
+            <!-- Log in -->
+            <li class="nav-item ms-lg-auto">
+              <a class="btn btn-ghost-dark me-2 me-lg-0" href="@@autopath/page-login.html">Log in</a>
+              <a class="btn btn-dark d-lg-none" href="@@autopath/page-signup.html">Sign up</a>
+            </li>
+            <!-- End Log in -->
+
+            <!-- Sign up -->
+            <li class="nav-item">
+              <a class="btn btn-dark d-none d-lg-inline-block" href="@@autopath/page-signup.html">Sign up</a>
+            </li>
+            <!-- End Sign up -->
+          </ul>
+        </div>
+      </div>
+      <!-- End Collapse -->
+    </nav>
+  </div>
+</header>

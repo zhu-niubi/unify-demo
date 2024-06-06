@@ -1,0 +1,90 @@
+/*------------------------------------
+  Blockquote
+------------------------------------*/
+
+.blockquote {
+  position: relative;
+  color: $blockquote-color;
+
+  &::before {
+    position: absolute;
+    top: -$blockquote-pseudo-top-offset;
+    left: -$blockquote-pseudo-left-offset;
+    width: $blockquote-pseudo-width;
+    height: $blockquote-pseudo-height;
+    background-image: escape-svg($blockquote-pseudo);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: '';
+  }
+}
+
+.blockquote-footer {
+  font-weight: $blockquote-footer-font-weight;
+  line-height: normal;
+  margin-top: $blockquote-footer-margin-y;
+  margin-bottom: 0;
+
+  &::before {
+    content: '';
+  }
+}
+
+.blockquote-footer-source {
+  display: block;
+  color: $blockquote-footer-source-color;
+  font-size: $blockquote-footer-source-font-size;
+  font-weight: $blockquote-footer-source-font-weight;
+  margin-top: $blockquote-footer-source-margin-y;
+}
+
+// Light
+.blockquote-light {
+  blockquote,
+  .blockquote {
+    color: $blockquote-light-color;
+
+    &::before {
+      background-image: escape-svg($blockquote-light-pseudo);
+    }
+  }
+
+  .blockquote-footer {
+    color: $blockquote-light-color;
+  }
+
+  .blockquote-footer-source {
+    color: $blockquote-light-footer-source-color;
+  }
+}
+
+// Sizes
+.blockquote-sm {
+  &.blockquote,
+  .blockquote {
+    @include font-size($blockquote-sm-font-size);
+
+    &::before {
+      top: -$blockquote-sm-pseudo-top-offset;
+      left: -$blockquote-sm-pseudo-left-offset;
+      width: $blockquote-sm-pseudo-width;
+      height: $blockquote-sm-pseudo-height;
+    }
+  }
+}
+
+.blockquote-lg {
+  &.blockquote,
+  .blockquote {
+    @include font-size($blockquote-lg-font-size);
+    font-weight: $blockquote-lg-font-weight;
+
+    &::before {
+      top: -$blockquote-lg-pseudo-top-offset;
+      left: -$blockquote-lg-pseudo-left-offset;
+      width: $blockquote-lg-pseudo-width;
+      height: $blockquote-lg-pseudo-height;
+    }
+  }
+}

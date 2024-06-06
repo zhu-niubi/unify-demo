@@ -1,0 +1,27 @@
+/*------------------------------------
+  List Timeline
+------------------------------------*/
+
+.list-timeline {
+  position: relative;
+  padding-top: $list-timeline-padding-y;
+  padding-bottom: $list-timeline-padding-y;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: $list-timeline-pseudo-width;
+    height: $list-timeline-pseudo-height;
+    background-image: escape-svg($list-timeline-pseudo-bg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: $list-timeline-pseudo-width $list-timeline-pseudo-height;
+    transform: translateX(-50%);
+    content: '';
+  }
+}
+
+.list-timeline-item {
+  max-width: $list-timeline-item-max-width;
+}

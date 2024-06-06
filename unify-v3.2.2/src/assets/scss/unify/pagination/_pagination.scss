@@ -1,0 +1,12 @@
+/*------------------------------------
+  Pagination
+------------------------------------*/
+
+.page-link {
+  min-width: $pagination-min-width;
+  font-weight: $pagination-font-weight;
+  text-align: center;
+  margin-left: $pagination-margin-x;
+  margin-right: $pagination-margin-x;
+  @include border-radius($pagination-border-radius);
+}

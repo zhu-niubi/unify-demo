@@ -1,0 +1,32 @@
+/*------------------------------------
+  List Step
+------------------------------------*/
+
+.list-step {
+  position: relative;
+
+  .list-step-item {
+    position: relative;
+    
+    &:not(:first-child)::before {
+      position: absolute;
+      top: -(calc($list-step-pseudo-height / 2));
+      left: 50%;
+      width: $list-step-pseudo-width;
+      height: $list-step-pseudo-height;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: $list-step-pseudo-width $list-step-pseudo-height;
+      transform: translateX(-50%);
+      content: '';
+    }
+
+    &:nth-of-type(even)::before {
+      background-image: escape-svg($list-step-pseudo-bg);
+    }
+
+    &:nth-of-type(odd)::before {
+      background-image: escape-svg($list-step-pseudo-nth-type-odd-bg);
+    }
+  }
+}

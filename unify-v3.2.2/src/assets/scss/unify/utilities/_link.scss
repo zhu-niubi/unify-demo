@@ -1,0 +1,71 @@
+/*------------------------------------
+  Link
+------------------------------------*/
+
+.link {
+  display: inline-block;
+  font-size: $link-font-size;
+}
+
+.link-pointer {
+  position: relative;
+  font-weight: $link-font-weight;
+  padding-right: #{$link-pointer-pseudo-arrow-width * 2};
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: $link-pointer-pseudo-arrow-position-offset;
+    width: $link-pointer-pseudo-arrow-width;
+    height: $link-pointer-pseudo-arrow-height;
+    background-image: escape-svg($link-pointer-pseudo-arrow-pseudo-bg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: $link-pointer-pseudo-arrow-width $link-pointer-pseudo-arrow-height;
+    content: '';
+    transform: translateY(-50%);
+    transition: $link-pointer-pseudo-arrow-transition;
+  }
+
+  &:hover,
+  [href]:hover & {
+    &::after {
+      right: $link-pointer-pseudo-arrow-hover-position-offset;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .link-#{$color} {
+    @if $link-shade-percentage != 0 {
+      &.link-pointer::after {
+        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='#{$value}' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z'/></svg>"));
+      }
+
+      &:hover,
+      &:focus {
+        opacity: $link-hover-opacity;
+      }
+    }
+  }
+}
+
+.link-light-75 {
+  opacity: .75;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+// Bordered
+.link-bordered {
+  border-bottom: $link-bordered-border-width solid $link-bordered-border-color;
+
+  @each $color, $value in $theme-colors {
+    &.link-#{$color} {
+      border-bottom-color: $value;
+    }
+  }
+}

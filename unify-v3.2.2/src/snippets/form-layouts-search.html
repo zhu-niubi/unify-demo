@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Form Layouts: Search - Snippets | Unify - Multipurpose Responsive Template</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="@@autopath/favicon.ico">
+
+  <!-- Font -->
+  <link href="@@vars.themeFont" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <!-- bundlecss:vendor [@@autopath] -->
+  <link rel="stylesheet" href="@@autopath/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- CSS Unify Template -->
+  <!-- bundlecss:theme [@@autopath] @@vars.version -->
+  <link rel="stylesheet" href="@@autopath/assets/css/theme.css">
+  <link rel="stylesheet" href="@@autopath/assets/css/snippets.css">
+</head>
+
+<body class="navbar-sidebar-aside-lg">
+  <!-- ========== HEADER ========== -->
+  @@include("@@autopath/partials/docs/snippets-navbar.html")
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Navbar -->
+    @@include("@@autopath/partials/docs/snippets-sidebar.html", {
+      "category": "",
+      "link": "form-layouts-search.html"
+    })
+    <!-- End Navbar -->
+
+    <!-- Content -->
+    <div class="navbar-sidebar-aside-content content-space-1 content-space-md-2 px-lg-5 px-xl-10">
+      <!-- Page Header -->
+      <div class="docs-page-header">
+        <div class="row align-items-center">
+          <div class="col-sm">
+            <h1 class="docs-page-header-title">Form Layouts: Search</h1>
+          </div>
+        </div>
+      </div>
+      <!-- End Page Header -->
+
+      <!-- Heading -->
+      <h2 id="component-1" class="hs-docs-heading">
+        Component #1 <a class="anchorjs-link" href="#component-1" aria-label="Anchor" data-anchorjs-icon="#"></a>
+      </h2>
+      <!-- End Heading -->
+
+      <!-- Card -->
+      <div class="card">
+        <!-- Header -->
+        <div class="card-header">
+          <!-- Nav -->
+          <ul class="nav nav-segment" id="navTab1" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="nav-resultTab1" href="#nav-result1" data-bs-toggle="pill" data-bs-target="#nav-result1" role="tab" aria-controls="nav-result1" aria-selected="true">Preview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav-htmlTab1" href="#nav-html1" data-bs-toggle="pill" data-bs-target="#nav-html1" role="tab" aria-controls="nav-html1" aria-selected="false">HTML</a>
+            </li>
+          </ul>
+          <!-- End Nav -->
+        </div>
+        <!-- End Header -->
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="navTabContent1">
+          <div class="tab-pane fade p-4 show active" id="nav-result1" role="tabpanel" aria-labelledby="nav-resultTab1">
+            <!-- Hero -->
+            <div class="overflow-hidden">
+              <div class="container content-space-1">
+                <div class="w-lg-50 text-center mx-lg-auto">
+                  <!-- Heading -->
+                  <div class="mb-5">
+                    <h1 class="display-4">Insights</h1>
+                    <p>Stay in the know with insights from industry experts.</p>
+                  </div>
+                  <!-- End Heading -->
+
+                  <form>
+                    <div class="position-relative">
+                      <!-- Input Card -->
+                      <div class="input-card input-card-sm position-relative zi-1">
+                        <div class="input-card-form">
+                          <label for="searchForm" class="form-label visually-hidden">Search article</label>
+                          <input type="text" class="form-control form-control-lg" id="searchForm" placeholder="Search article" aria-label="Search article">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-lg"><i class="bi-search"></i></button>
+                      </div>
+                      <!-- End Input Card -->
+
+                      <!-- SVG Shape -->
+                      <figure class="position-absolute top-0 end-0 d-none d-sm-block mt-n7 me-n10" style="width: 4rem;">
+                        <img class="img-fluid" src="@@autopath/assets/svg/components/pointer-up.svg" alt="Image Description">
+                      </figure>
+                      <!-- End SVG Shape -->
+
+                      <!-- SVG Shape -->
+                      <figure class="position-absolute bottom-0 start-0 mb-n7" style="width: 12rem; margin-left: -10rem;">
+                        <img class="img-fluid" src="@@autopath/assets/svg/components/curved-shape.svg" alt="Image Description">
+                      </figure>
+                      <!-- End SVG Shape -->
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- End Hero -->
+          </div>
+
+          <div class="tab-pane fade" id="nav-html1" role="tabpanel" aria-labelledby="nav-htmlTab1">
+            <pre>
+              <code class="language-markup" data-lang="html">
+                &lt;!-- Hero --&gt;
+                &lt;div class="overflow-hidden"&gt;
+                  &lt;div class="container content-space-1"&gt;
+                    &lt;div class="w-lg-50 text-center mx-lg-auto"&gt;
+                      &lt;!-- Heading --&gt;
+                      &lt;div class="mb-5"&gt;
+                        &lt;h1 class="display-4"&gt;Insights&lt;/h1&gt;
+                        &lt;p&gt;Stay in the know with insights from industry experts.&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;!-- End Heading --&gt;
+
+                      &lt;form&gt;
+                        &lt;div class="position-relative"&gt;
+                          &lt;!-- Input Card --&gt;
+                          &lt;div class="input-card input-card-sm"&gt;
+                            &lt;div class="input-card-form"&gt;
+                              &lt;label for="searchForm" class="form-label visually-hidden"&gt;Search article&lt;/label&gt;
+                              &lt;input type="text" class="form-control form-control-lg" id="searchForm" placeholder="Search article" aria-label="Search article"&gt;
+                            &lt;/div&gt;
+                            &lt;button type="button" class="btn btn-primary btn-lg"&gt;&lt;i class="bi-search"&gt;&lt;/i&gt;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Input Card --&gt;
+
+                          &lt;!-- SVG Shape --&gt;
+                          &lt;figure class="position-absolute top-0 end-0 d-none d-sm-block zi-n1 mt-n7 me-n10" style="width: 4rem;"&gt;
+                            &lt;img class="img-fluid" src="@@autopath/assets/svg/components/pointer-up.svg" alt="Image Description"&gt;
+                          &lt;/figure&gt;
+                          &lt;!-- End SVG Shape --&gt;
+
+                          &lt;!-- SVG Shape --&gt;
+                          &lt;figure class="position-absolute bottom-0 start-0 zi-n1 mb-n7" style="width: 12rem; margin-left: -10rem;"&gt;
+                            &lt;img class="img-fluid" src="@@autopath/assets/svg/components/curved-shape.svg" alt="Image Description"&gt;
+                          &lt;/figure&gt;
+                          &lt;!-- End SVG Shape --&gt;
+                        &lt;/div&gt;
+                      &lt;/form&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- End Hero --&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+        <!-- End Tab Content -->
+      </div>
+      <!-- End Card -->
+    </div>
+    <!-- End Content -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Go To -->
+  @@include("@@autopath/partials/layouts-components/go-to.html")
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- JS Global Compulsory @@deleteLine:build -->
+  <script src="@@autopath/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <!-- bundlejs:vendor [@@autopath] -->
+  <script src="@@autopath/assets/vendor/hs-header/dist/hs-header.min.js"></script>
+  <script src="@@autopath/assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+  <script src="@@autopath/node_modules/list.js/dist/list.min.js"></script>
+  <script src="@@autopath/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+  <script src="@@autopath/assets/vendor/prism/prism.js"></script>
+
+  <!-- JS Unify -->
+  <!-- bundlejs:theme [@@autopath] -->
+  <script src="@@autopath/assets/js/hs.core.js"></script>
+  <script src="@@autopath/assets/js/hs.list.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    (function() {
+      // INITIALIZATION OF HEADER
+      // =======================================================
+      new HSHeader('#header').init()
+
+
+      // INITIALIZATION OF NAV SCROLLER
+      // =======================================================
+      new HsNavScroller('.js-nav-scroller', {
+        delay: 400,
+        offset: 140
+      })
+
+
+      // INITIALIZATION OF LISTJS COMPONENT
+      // =======================================================
+      const snippetsSearch = HSCore.components.HSList.init('#snippetsSearch');
+
+
+      // GET JSON FILE RESULTS
+      // =======================================================
+      fetch('@@autopath/assets/json/snippets-search.json')
+      .then(response => response.json())
+      .then(data => {
+        snippetsSearch.getItem(0).add(data)
+      })
+
+
+      // INITIALIZATION OF GO TO
+      // =======================================================
+      new HSGoTo('.js-go-to')
+    })()
+  </script>
+</body>
+</html>
