@@ -1,0 +1,25 @@
+/*------------------------------------
+  Form Check Pinned Top End
+------------------------------------*/
+
+.form-check-pinned-top-end {
+  position: relative;
+
+  .form-check-input {
+    position: absolute;
+    top: $form-check-pinned-input-position-offset;
+    right: $form-check-pinned-input-position-offset;
+    width: $form-check-pinned-input-width;
+    height: $form-check-pinned-input-width;
+    float: none;
+    margin-left: 0;
+    margin-top: 0;
+
+    &:checked {
+      &[type="checkbox"],
+      &[type="radio"] {
+        background-image: escape-svg($form-check-pinned-input-checked-bg-image);
+      }
+    }
+  }
+}

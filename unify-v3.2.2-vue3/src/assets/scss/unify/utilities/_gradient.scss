@@ -1,0 +1,11 @@
+/*------------------------------------
+  Gradients
+------------------------------------*/
+
+.bg-soft-dark-to-start-75 {
+  @include gradient-x($start-color: $gradient-transparent, $end-color: rgba($gradient-dark, .1), $start-percent: 25%, $end-percent: 0%);
+}
+
+.bg-gradient-to-bottom-sm-light {
+  @include gradient-y($start-color: $gradient-light, $end-color: transparent);
+}

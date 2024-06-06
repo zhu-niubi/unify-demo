@@ -1,0 +1,12 @@
+/*------------------------------------
+  Badge
+------------------------------------*/
+
+.badge {
+  padding: #{$badge-padding-y * 1.5} #{$badge-padding-x * 1.5};
+  line-height: normal;
+}
+
+.badge-sm {
+  padding: $badge-padding-y $badge-padding-x; 
+}

@@ -1,0 +1,14 @@
+/*------------------------------------
+  Buttons
+------------------------------------*/
+
+.btn-link {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+}

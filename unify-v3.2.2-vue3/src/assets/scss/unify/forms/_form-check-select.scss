@@ -1,0 +1,60 @@
+/*------------------------------------
+  Form Check Select
+------------------------------------*/
+
+.form-check-select {
+  position: relative;
+  cursor: pointer;
+  padding: $form-check-select-padding-y $form-check-select-padding-x $form-check-select-padding-y $form-check-select-padding-x * 2.5;
+
+  &.form-check-pinned-top-end,
+  &.form-check-reverse {
+    padding: $form-check-select-padding-y $form-check-select-padding-x;
+  }
+
+  .form-check-input {
+    position: relative;
+    z-index: 2;
+    width: $form-check-select-width;
+    height: $form-check-select-height;
+    background-color: $form-check-select-input-bg-color;
+    border-width: 0;
+    margin-top: $form-check-select-margin-y;
+    @include border-radius($form-check-select-input-border-radius);
+
+    &:checked[type="radio"],
+    &:checked[type="checkbox"] {
+      background-image: none;
+
+      ~ .form-check-stretched-bg::before {
+        background-color: $form-check-select-stretched-bg-color;
+        border-color: $form-check-select-checked-border-color;
+      }
+    }
+    
+    &:disabled[type="radio"],
+    &:disabled[type="checkbox"] {
+      ~ .form-check-label > * {
+        opacity: $form-check-label-disabled-opacity;
+      }
+
+      ~ .form-check-stretched-bg::before {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .form-check-stretched-bg::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: auto;
+    content: '';
+    z-index: 1;
+    border: $form-check-select-hover-border-width solid $form-check-select-hover-border-color;
+    background-color: rgba(0, 0, 0, 0);
+    @include border-radius($form-check-select-stretched-bg-border-radius);
+  }
+}

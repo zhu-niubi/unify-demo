@@ -1,0 +1,56 @@
+/*------------------------------------
+  Input Group Merge
+------------------------------------*/
+
+.input-group-merge {
+  position: relative;
+
+  .input-group-prepend,
+  .input-group-append {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    background-color: transparent;
+    transform: translateY(-50%);
+
+    &.input-group-text {
+      border-width: $input-group-text-border-width;
+      min-height: $input-height-sm;
+    }
+  }
+
+  .input-group-prepend {
+    left: 1px;
+  }
+
+  .input-group-append {
+    right: 1px;
+  }
+
+  .form-select,
+  .form-control {
+    &:not(:first-child) {
+      padding-left: calc($input-group-addon-padding-x + $input-font-size + $input-group-addon-padding-x + ($input-padding-x / 2) - ($input-border-width * 2));
+      @include border-start-radius($input-border-radius);
+    }
+
+    &:not(:last-child) {
+      padding-right: calc($input-group-addon-padding-x + $input-font-size + $input-group-addon-padding-x + ($input-padding-x / 2) - ($input-border-width * 2));
+      @include border-end-radius($input-border-radius);
+    }
+  }
+}
+
+// Sizes
+.input-group-merge {
+  .form-select-sm,
+  .form-control-sm {
+    &:not(:first-child) {
+      padding-left: calc($input-group-addon-padding-x + $input-font-size + $input-group-addon-padding-x + ($input-padding-x-sm / 2) - ($input-border-width * 2));
+    }
+
+    &:not(:last-child) {
+      padding-right: calc($input-group-addon-padding-x + $input-font-size + $input-group-addon-padding-x + ($input-padding-x-sm / 2) - ($input-border-width * 2));
+    }
+  }
+}

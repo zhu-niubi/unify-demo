@@ -1,0 +1,48 @@
+/*------------------------------------
+  Form Check
+------------------------------------*/
+
+.form-check-input,
+.form-check-label {
+  cursor: pointer;
+}
+
+.form-check-label {
+  font-size: $form-check-font-size;
+}
+
+// Validation
+.was-validated .form-check-input:valid,
+.form-check-input.is-valid {
+  border: $form-check-input-border;
+}
+
+.was-validated .form-check-input:valid ~ .form-check-label,
+.form-check-input.is-valid ~ .form-check-label {
+  color: $form-check-label-color;
+}
+
+// Custom
+.form-check-custom {
+  .form-check-input {
+    &:checked {
+      &[type="checkbox"],
+      &[type="radio"] {
+        background-image: escape-svg($form-check-custom-input-checked-bg-image);
+      }
+    }
+  }
+}
+
+// Form Check Reverse
+.form-check-reverse {
+  padding-left: 0;
+  padding-right: $form-check-padding-start;
+  text-align: left;
+
+  .form-check-input {
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
